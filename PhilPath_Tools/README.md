@@ -6,3 +6,5 @@ input by the user or inferred from a keras model hdf5 file). The default colors 
 the classes are ok as a starting point. Default pixelSizeMicrons is 1.0 and should
 be changed and the default class names are trivial (not sure if either or both of
 these pieces of information can be found from the hdf5 file?).
+
+Run `python gen_philpath_config.py --help` from terminal for usage instructions.
