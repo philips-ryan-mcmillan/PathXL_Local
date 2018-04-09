@@ -6,6 +6,7 @@ import os
 import argparse
 import re
 from collections import OrderedDict
+from random import randint
 
 class names():
     regex = {
@@ -37,7 +38,10 @@ class names():
         elif self.regex['boundary'].search(name):
             return [0, 0, 255]
         else:
-            return self.colors[cid]
+            try:
+                return self.colors[cid]
+            except:
+                return [randint(0, 255) for n in range(0,3)]
 
     def _infer_type_from_name(self, name):
         if self.regex['boundary'].search(name):
